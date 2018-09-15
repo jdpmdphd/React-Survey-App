@@ -15,14 +15,12 @@ firebase.initializeApp(config);
 class Login extends Component {
     constructor(props){
       super(props);
-
-      this.handleInfoSubmit = this.handleInfoSubmit.bind(this);
     }
 
-    handleInfoSubmit(e) {
+    handleInfoSubmit = (e) => {
         const Username = this.refs.name.value;
         const email = this.refs.email.value;
-        
+
         if(Username !== '' && email !== '') {
             this.props.changeUsername(Username, email);
         } else {
@@ -36,12 +34,12 @@ class Login extends Component {
     googleLogin = () => {
         const provider = new firebase.auth.GoogleAuthProvider();
         const promise = firebase.auth().signInWithPopup(provider);
-
         promise
         .then(result => {
             const user = result.user;
-            const username = user.displayName;
-            const email = user.email;
+            // const username = user.displayName;
+            // const email = user.email;
+            const { displayName: username, email } = result.user;
             this.props.logUser(user, username, email);
         })
         .catch(err => {
@@ -57,7 +55,7 @@ class Login extends Component {
               <div className="tab-content">
                   <form onSubmit={this.handleInfoSubmit}>
                       <label>Fullname <span className="star">*</span></label>
-                      <input className="nameInput" type="text" placeholder="FullName" autofocus="true" ref="name"/><br />
+                      <input className="nameInput" type="text" placeholder="FullName" autoFocus="true" ref="name"/><br />
                       <label>Email <span className="star">*</span></label>
                       <input className="nameInput" type="email" placeholder="Email" ref="email"/><br />
                       <input className="submitButton" type="submit" value="Continue"/>

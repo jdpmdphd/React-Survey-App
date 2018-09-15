@@ -197,7 +197,7 @@ label {
     left: 70px;
 }
 
-.surveyQuestion:not(:last-child)::after {
+.survey-question:not(:last-child)::after {
     content: '';
     display: block;
     width: 100%;

@@ -89,7 +89,7 @@ class Survey extends Component {
           currentDisplay = <form onSubmit={this.handleSurveySubmit}>
              <div className="card">
                  <h3 className="survey-title">Personnel Survey</h3>
-                 <div className="surveyQuestion">
+                 <div className="survey-question">
                      <h3>Gender</h3>
                      <label className="check-container">
                          <input type="radio" name="answer1" value="M" onClick={this.answerSelected} /> Male
@@ -98,7 +98,7 @@ class Survey extends Component {
                          <input type="radio" name="answer1" value="F" onClick={this.answerSelected} /> Female
                      </label>
                  </div>
-                 <div className="surveyQuestion">
+                 <div className="survey-question">
                      <h3>Age range</h3>
                      <label className="check-container">
                          <input type="radio" name="answer2" value="< 18" onClick={this.answerSelected} /> <span>below 18</span>
@@ -110,7 +110,7 @@ class Survey extends Component {
                          <input type="radio" name="answer2" value="25 above" onClick={this.answerSelected} /> 25 above
                     </label>
                  </div>
-                 <div className="surveyQuestion">
+                 <div className="survey-question">
                      <h3>Highest Level of Education</h3>
                      <label className="check-container">
                          <input type="radio" name="answer3" value="High School" onClick={this.answerSelected} /> High School
@@ -125,7 +125,7 @@ class Survey extends Component {
                          <input type="radio" name="answer3" value="Masters" onClick={this.answerSelected} /> Masters
                     </label>
                  </div>
-                 <div className="surveyQuestion">
+                 <div className="survey-question">
                      <h3>Interest</h3>
                      <label className="check-container">
                          <input type="radio" name="answer4" value="Technology" onClick={this.answerSelected} /> Technology
@@ -140,7 +140,7 @@ class Survey extends Component {
                          <input type="radio" name="answer4" value="Sports" onClick={this.answerSelected} /> Sports
                     </label>
                  </div>
-                 <div className="surveyQuestion">
+                 <div className="survey-question">
                      <h3>Job status</h3>
                      <label className="check-container">
                          <input type="radio" name="answer5" value="Employed" onClick={this.answerSelected} /> Employed
